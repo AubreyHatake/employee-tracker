@@ -5,7 +5,7 @@ var connection = mysql.createConnection({
 	port: 3306,
 	// MySQL Workbench
 	user: "root",
-	password: "12345678",
+	password: "",
 	// Database created in schemea.sql
 	database: "employeesDB",
 });
