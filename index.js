@@ -89,7 +89,7 @@ function firstPrompt() {
 					`\n“Goodbye"\n- `,
 				);
 				connection.end();
-				break; // ⛔
+				break; 
 		}
 	});
 }
