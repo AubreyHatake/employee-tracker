@@ -44,46 +44,46 @@ function firstPrompt() {
 		switch (task) {
 			case "View Employees":
 				viewEmployee();
-				break; // ⛔
+				break; 
 			case "View Employees by Manager":
 				viewEmployeeByManager();
-				break; // ⛔
+				break; 
 			case "View Employees by Department":
 				viewEmployeeByDepartment();
-				break; // ⛔
+				break; 
 			case "View Departments":
 				viewDepartments();
-				break; // ⛔
+				break; 
 			case "View Roles":
 				viewRoles();
-				break; // ⛔
+				break; 
 			case "View Department Budget":
 				viewDepartmentBudget();
-				break; // ⛔
+				break; 
 			case "Add Employee":
 				addEmployee();
-				break; // ⛔
+				break; 
 			case "Add Department":
 				addDepartment();
-				break; // ⛔
+				break; 
 			case "Add Role":
 				addRole();
-				break; // ⛔
+				break; 
 			case "Update Employee Role":
 				updateEmployeeRole();
-				break; // ⛔
+				break;
 			case "Update Employee Manager":
 				updateEmployeeManager();
-				break; // ⛔
+				break; 
 			case "Remove Employee":
 				deleteEmployee();
-				break; // ⛔
+				break; 
 			case "Remove Department":
 				deleteDepartment();
-				break; // ⛔
+				break; 
 			case "Remove Role":
 				deleteRole();
-				break; // ⛔
+				break; 
 			case "Exit":
 				console.log(
 					`\n“Goodbye"\n- `,
@@ -115,7 +115,7 @@ function viewEmployee() {
 		if (err) throw err;
 
 		console.table(res);
-		console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+		
 
 		firstPrompt();
 	});
@@ -161,7 +161,7 @@ function viewEmployeeByManager() {
 					if (err) throw err;
 
 					console.table("\nManager's subordinates:", res);
-					console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+					
 
 					firstPrompt();
 				});
@@ -205,7 +205,7 @@ function viewEmployeeByDepartment() {
 					if (err) throw err;
 
 					console.table("\nDepartment Rota: ", res);
-					console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+					
 
 					firstPrompt();
 				});
@@ -222,7 +222,6 @@ function viewDepartments() {
 		res.forEach((department) => {
 			console.log(`ID: ${department.id} | ${department.name} Department`);
 		});
-		console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
 		firstPrompt();
 	});
 }
@@ -238,7 +237,7 @@ function viewRoles() {
 				`ID: ${role.id} | Title: ${role.title}\n Salary: ${role.salary}\n`,
 			);
 		});
-		console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+
 		firstPrompt();
 	});
 }
@@ -261,7 +260,7 @@ function viewDepartmentBudget() {
 				`Department: ${department.name}\n Budget: ${department.budget}\n`,
 			);
 		});
-		console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+		
 		firstPrompt();
 	});
 }
@@ -319,9 +318,6 @@ const addEmployee = () => {
 								(err, res) => {
 									if (err) throw err;
 									console.log("\n" + res.affectedRows + " employee created");
-									console.log(
-										"\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n",
-									);
 									viewEmployee();
 								},
 							);
@@ -342,7 +338,6 @@ function addDepartment() {
 				`You have added this department: ${answer.department.toUpperCase()}.`,
 			);
 		});
-		console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
 		viewDepartments();
 	});
 }
@@ -375,7 +370,7 @@ function addRole() {
 						if (err) throw err;
 
 						console.log("\n" + res.affectedRows + " role created");
-						console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+				
 
 						viewRoles();
 					},
@@ -424,7 +419,7 @@ const updateEmployeeRole = () => {
 							console.log(
 								"\n" + "\n" + res.affectedRows + " Updated successfully!",
 							);
-							console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+						
 							firstPrompt();
 						},
 					);
@@ -462,7 +457,7 @@ const updateEmployeeManager = () => {
 						console.log(
 							"\n" + "\n" + res.affectedRows + " Updated successfully!",
 						);
-						console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+					
 						firstPrompt();
 					},
 				);
@@ -499,7 +494,7 @@ function deleteEmployee() {
 					if (err) throw err;
 
 					console.log("\n" + res.affectedRows + "  employee deleted");
-					console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+				
 
 					firstPrompt();
 				});
@@ -533,7 +528,7 @@ function deleteDepartment() {
 					if (err) throw err;
 
 					console.log("\n" + res.affectedRows + " department deleted");
-					console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+				
 
 					viewDepartments();
 				});
@@ -564,7 +559,7 @@ function deleteRole() {
 					if (err) throw err;
 
 					console.log("\n" + res.affectedRows + " role deleted");
-					console.log("\n<<<<<<<<<<<<<<<<<<<< ⛔ >>>>>>>>>>>>>>>>>>>>\n");
+				
 
 					viewRoles();
 				});
