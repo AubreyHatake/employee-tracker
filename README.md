@@ -1,5 +1,7 @@
 # employee-tracker
-For this assignment I was able to create a back end app that tracks employees! This assignment was finished over the course of a month and was worked on with tutors, group study sessions with other students where we were able to help each other, and this was also worked on independently. I took a long time working on this, with tutors to help me better understand the index.js aspect of this assignment. There are few commits to this repo due to working on it for so long and hitting save instead of the commiting my work as I went. 🤦 
+For this assignment I was able to create a back end app that tracks employees!I was able to utilize MySQL, JavaScript, jQuery, and different npm packages. (npm i, npm inquirer, npm console.table) 
+Resources I used included stackoverflow, offical documentation for npm packages, and tutors/group study.
+This assignment was finished over the course of a month and was worked on with tutors, group study sessions with other students where we were able to help each other, and this was also worked on independently. I took a long time working on this, with tutors to help me better understand the index.js aspect of this assignment. There are few commits to this repo due to working on it for so long and hitting save instead of the commiting my work as I went. 🤦 
 
 If you are interested in seeing the walkthrough video click  [here](<assets/Untitled_ Jun 11, 2023 5_32 PM.webm>)
 
